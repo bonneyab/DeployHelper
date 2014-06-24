@@ -1,0 +1,19 @@
+﻿@model Contract.DTO.Deployment
+@{
+    ViewBag.Title = "Edit Deployment";
+}
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.DeploymentId)
+    <div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, new { @class = "control-label col-sm-2" }) @Html.TextBoxFor(m => m.Name, new { @class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description, new { @class = "control-label col-sm-2" }) @Html.TextAreaFor(m => m.Description, new { @class = "form-control", rows = "5"})
+        </div>
+        <input type="submit" value="Save" class="btn btn-primary" /> <a href="@Url.Action("Details", "Deployment", new {deploymentId = Model.DeploymentId})" class="btn btn-info">Cancel</a>
+    </div>
+}

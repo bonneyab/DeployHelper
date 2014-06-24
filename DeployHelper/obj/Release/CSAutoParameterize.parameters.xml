@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DeployHelperContext-Web.config Connection String" description="DeployHelperContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=ADAMSMV01\MSSQLSERVER2008;Initial Catalog=DeployHelper;Integrated Security=SSPI;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\adambo\\Documents\\DeploymentProjects\\DeployHelper\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DeployHelperContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,30 @@
+﻿@model List<Contract.DTO.Grouping>
+<table class="table table-hover" id="dependencyTable">
+    <tr>
+        <th>dependency</th>
+        <th>Description</th>
+        <th>Complete</th>
+        <th>VendorActionComplete</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var grouping in Model)
+    {
+        <tr>
+            <td>@grouping.Name</td>
+            <td>@grouping.Owner</td>
+            <td>@grouping.Completed</td>
+            @if (grouping.VendorActionRequired)
+            {
+                <td>@grouping.VendorActionComplete</td>
+            }
+            else
+            {
+                <td>N/A</td>
+            }
+            <td>
+                <a data-toggle="tooltip" data-placement="top" title="Edit Grouping" class="glyphicon glyphicon-pencil" href="@Url.Action("Details", "Groupings", new {groupingId = grouping.GroupingId})"></a> 
+                <a data-toggle="tooltip" data-placement="top" title="Delete Dependency" class="delete-dependency glyphicon glyphicon-remove" href="#" dependency-id="@grouping.GroupingId"></a>
+            </td>
+        </tr>
+    }
+</table>

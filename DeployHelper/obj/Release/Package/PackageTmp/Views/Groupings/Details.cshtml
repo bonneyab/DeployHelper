@@ -1,0 +1,31 @@
+﻿@model DeploymentHelperServices.Models.GroupingDetailsViewModel
+@{
+    ViewBag.Title = "Grouping Details";
+}
+<div class="h1">Group Details <small><a href="@Url.Action("Edit", new { groupingId = Model.Group.GroupingId })">Configure</a></small></div>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
+    <li><a href="#steps" data-toggle="tab">Steps</a></li>
+    <li><a href="#dependencies" data-toggle="tab">Dependencies</a></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active" id="details">
+        <h2>
+            @Model.Group.Name
+        </h2>
+        @Html.Partial("PartialViews/GroupingDetails", Model.Group)
+    </div>
+    <div class="tab-pane" id="steps">
+        <h2>
+            Steps <small><a href="#" data-toggle="modal" data-target="#stepModal">Add Step</a></small>
+        </h2>
+        @Html.Partial("PartialViews/Steps", Model.Steps)
+    </div>
+    <div class="tab-pane" id="dependencies">
+        <h2>
+            Dependencies <small><a href="#" data-toggle="modal" data-target="#dependencyModal">Add Dependency</a></small>
+        </h2>
+        @Html.Partial("PartialViews/Dependencies", Model.Dependencies)
+        @Html.Partial("PartialViews/AvailableDependencies", Model.AvailableDependencies)
+    </div>
+</div>

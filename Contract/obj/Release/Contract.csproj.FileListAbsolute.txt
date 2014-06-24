@@ -1,0 +1,9 @@
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Release\Contract.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Release\Contract.pdb
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Release\EntityFramework.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Release\EntityFramework.xml
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\adambo\Documents\DeploymentProjects\Contract\obj\Release\Contract.csprojResolveAssemblyReference.cache
+C:\Users\adambo\Documents\DeploymentProjects\Contract\obj\Release\Contract.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\obj\Release\Contract.pdb

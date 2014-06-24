@@ -1,0 +1,28 @@
+﻿@model Contract.DTO.Grouping
+@{
+    ViewBag.Title = "Edit Grouping";
+}
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.GroupingId)
+    @Html.HiddenFor(m => m.DeploymentId)
+    @Html.HiddenFor(m => m.Completed)
+    @Html.HiddenFor(m => m.VendorActionComplete)
+    @Html.HiddenFor(m => m.Notes)
+    @Html.HiddenFor(m => m.VendorNotes)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "control-label col-sm-3" }) @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Owner, new { @class = "control-label col-sm-3" }) @Html.TextBoxFor(m => m.Owner, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.VendorActionRequired, new { @class = "control-label col-sm-3" }) @Html.CheckBoxFor(m => m.VendorActionRequired)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Weight, new { @class = "control-label col-sm-3" }) @Html.TextBoxFor(m => m.Weight, new { @class = "form-control" })
+    </div>
+    <input type="submit" value="Edit" class="btn btn-primary" /> <a href="@Url.Action("Details", new {groupingId = Model.GroupingId})" class="btn btn-info" >Cancel</a>
+}

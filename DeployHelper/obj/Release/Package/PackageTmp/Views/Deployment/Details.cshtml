@@ -1,0 +1,55 @@
+﻿@model DeploymentHelperServices.Models.DeploymentDetailsViewModel
+@{
+    ViewBag.Title = "Contact";
+}
+<h1 class="bs-glyphicons">
+    @Model.Deployment.Name
+    <ul class="bs-glyphicons-list">
+        <li>
+            <a href="@Url.Action("Create", "Groupings", new {Model.Deployment.DeploymentId})" data-toggle="tooltip" data-placement="bottom"
+               title="Create Grouping" class="glyphicon glyphicon-plus"></a>
+        </li>
+        <li>
+            <a href="@Url.Action("Edit", "Deployment", new {Model.Deployment.DeploymentId})" data-toggle="tooltip" data-placement="bottom"
+               title="Edit Deployment" class="glyphicon glyphicon-pencil"></a>
+        </li>
+        <li>
+            <a href="@Url.Action("Delete", "Deployment", new {Model.Deployment.DeploymentId})" data-toggle="tooltip" data-placement="bottom"
+               title="Delete Deployment" class="glyphicon glyphicon-remove  confirm" confirm-message="Are you sure you want to delete this deployment?"></a>
+        </li>
+        <li>
+            <a href="@Url.Action("Reset", "Deployment", new {Model.Deployment.DeploymentId})" data-toggle="tooltip" data-placement="bottom"
+               title="Reset Deployment" class="glyphicon glyphicon-repeat confirm" confirm-message="Are you sure you want to reset this deployment?"></a>
+        </li>
+        <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Copy Deployment" class="glyphicon glyphicon-file"></a></li>
+    </ul>
+</h1>
+<h3>@Model.Deployment.Description</h3>
+
+<div class="panel panel-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Grouping List</div>
+
+    <!-- Table -->
+    <table class="table table-hover">
+        <tr>
+            <th>Weight</th>
+            <th>Name</th>
+            <th>Owner</th>
+            <th>Vendor Complete</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var grouping in Model.Groupings)
+        {
+            <tr class="@grouping.CssClass">
+                <td>@grouping.Weight</td>
+                <td>@grouping.Name</td>
+                <td>@grouping.Owner</td>
+                <td>@(grouping.VendorActionRequired ? grouping.VendorActionComplete.ToString() : "N/A")</td>
+                <td>@grouping.Status</td>
+                <td><a href="@Url.Action("Details", "Groupings", new { groupingId = grouping.GroupingId })" class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit Grouping"></a> <a href="#" grouping-id="@grouping.GroupingId" data-toggle="tooltip" data-placement="top" title="Delete Grouping" class="glyphicon glyphicon-remove delete-grouping"></a></td>
+            </tr>
+        }
+    </table>
+</div>

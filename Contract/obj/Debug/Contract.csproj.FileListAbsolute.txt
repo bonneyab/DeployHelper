@@ -1,0 +1,17 @@
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\bin\Debug\Contract.dll
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\bin\Debug\Contract.pdb
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\bin\Debug\EntityFramework.dll
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\bin\Debug\EntityFramework.xml
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\obj\Debug\Contract.dll
+C:\Users\adambo\Documents\GitHub\Abo\Web\Contract\obj\Debug\Contract.pdb
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Debug\Contract.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Debug\Contract.pdb
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Debug\EntityFramework.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Debug\EntityFramework.xml
+C:\Users\adambo\Documents\DeploymentProjects\Contract\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\adambo\Documents\DeploymentProjects\Contract\obj\Debug\Contract.csprojResolveAssemblyReference.cache
+C:\Users\adambo\Documents\DeploymentProjects\Contract\obj\Debug\Contract.dll
+C:\Users\adambo\Documents\DeploymentProjects\Contract\obj\Debug\Contract.pdb

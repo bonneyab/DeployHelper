@@ -1,0 +1,33 @@
+﻿@model Contract.DTO.Grouping
+@using (Html.BeginForm())
+{
+    @*TODO: this should probably just use a viewmodel that doesn't care about all this*@
+    @Html.HiddenFor(m => m.GroupingId)
+    @Html.HiddenFor(m => m.DeploymentId)
+    @Html.HiddenFor(m => m.VendorActionRequired)
+    @Html.HiddenFor(m => m.Weight)
+    @Html.HiddenFor(m => m.Name)
+    @Html.HiddenFor(m => m.Owner)
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Owner </label>
+        <p class="form-control-static">@Model.Owner</p>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Completed, new { @class = "control-label col-sm-2" })@Html.CheckBoxFor(m => m.Completed)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Notes, new { @class = "control-label col-sm-2" })
+        @Html.TextAreaFor(m => m.Notes, new { @class = "form-control", rows = "5" })
+    </div>
+    if (Model.VendorActionRequired)
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.VendorActionComplete, new { @class = "control-label col-sm-3" })@Html.CheckBoxFor(m => m.VendorActionComplete)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.VendorNotes, new { @class = "control-label col-sm-2" })
+            @Html.TextAreaFor(m => m.VendorNotes, new { @class = "form-control", rows = "5" })
+        </div>
+    }
+    <button type="submit" class="btn btn-primary">Save</button> <a href="@Url.Action("Details", "Deployment", new {deploymentId = Model.DeploymentId})" class="btn btn-info">Cancel</a>
+}
